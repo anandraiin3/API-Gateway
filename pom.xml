@@ -21,7 +21,7 @@
            
             <plugin>
                <groupId>org.apache.jmeter</groupId>
-				<artifactId>ApacheJMeter_core</artifactId>
+			<artifactId>maven-jmeter-plugin</artifactId>
                 <executions>
                     <execution>
                         <id>jmeter-tests</id>
@@ -32,6 +32,35 @@
                     </execution>
                 </executions>
             </plugin>
+			
+			<plugin>
+   <groupId>org.codehaus.mojo</groupId>
+   <artifactId>xml-maven-plugin</artifactId>
+   <version>1.0-beta-2</version>
+   <executions>
+      <execution>
+         <phase>pre-site</phase>
+         <goals>
+             <goal>transform</goal>
+         </goals>
+         </execution>
+    </executions>
+    <configuration>
+         <transformationSets>
+             <transformationSet>
+                  <dir>${project.build.directory}/jmeter-reports</dir>
+                  <stylesheet>src/test/resources/jmeter-results-detail-report_21.xsl</stylesheet>
+                  <outputDir>${project.build.directory}/site/jmeter-results</outputDir>
+                  <fileMappers>
+                      <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
+                         <targetExtension>html</targetExtension>
+                      </fileMapper>
+                  </fileMappers>
+             </transformationSet>
+         </transformationSets>
+    </configuration>
+</plugin>
+			
         </plugins>
     </build>
 </project>
