@@ -145,7 +145,7 @@
 
 
     <build>
-        <finalName>teamwork</finalName>
+        <finalName>Axway</finalName>
         <plugins>
            
             <plugin>
