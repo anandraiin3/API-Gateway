@@ -21,6 +21,11 @@
                         <goals>
                             <goal>jmeter</goal>
                         </goals>
+						<configuration>
+                                <propertiesJMeter>
+                                    <log_level.jmeter>DEBUG</log_level.jmeter>
+                                </propertiesJMeter>
+                            </configuration>
                     </execution>
                 </executions>
   <configuration>
