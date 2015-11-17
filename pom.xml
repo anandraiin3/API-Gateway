@@ -50,7 +50,7 @@
        goal also fails (and subsequent goals aren't executed anymore). We want to create graphs
        from test-results, no matter if some requests failed or not, so we ignore jmeter failures.
     -->
-    <ignoreResultFailures>true</ignoreResultFailures>
+    <ignoreResultFailures>false</ignoreResultFailures>
   </configuration>
   <dependencies>
     <dependency>
