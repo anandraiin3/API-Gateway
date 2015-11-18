@@ -13,7 +13,7 @@
                 <artifactId>jmeter-analysis-maven-plugin</artifactId>
                 <version>1.0.4</version>
                 <configuration>
-                    <source>jmeter/results/*.jtl</source>
+                    <source>target/jmeter/results/*.jtl</source>
                 </configuration>
                 <executions>
                     <execution>
