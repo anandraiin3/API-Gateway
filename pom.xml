@@ -39,6 +39,7 @@
                     <overrideRootLogLevel>DEBUG</overrideRootLogLevel>
                     <suppressJMeterOutput>false</suppressJMeterOutput>
                     <ignoreResultFailures>false</ignoreResultFailures>
+					
                     <propertiesJMeter>
                         <jmeter.save.saveservice.thread_counts>true</jmeter.save.saveservice.thread_counts>
                     </propertiesJMeter>
