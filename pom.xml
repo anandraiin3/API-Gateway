@@ -13,7 +13,11 @@
                 <artifactId>jmeter-analysis-maven-plugin</artifactId>
                 <version>1.0.4</version>
                 <configuration>
-                    <source>target/jmeter/results/*.jtl</source>
+				
+				<source>jmeter/results/*.jtl</source>
+    
+				<targetDirectory>jmeter/reports</targetDirectory>
+                   
                 </configuration>
                 <executions>
                     <execution>
@@ -51,7 +55,7 @@
                         <goals>
                             <goal>jmeter</goal>
                         </goals>
-                        <phase>integration-test</phase>
+                        <phase>verify</phase>
                     </execution>
                 </executions>
                 <dependencies>
