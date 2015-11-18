@@ -14,9 +14,9 @@
                 <version>1.0.4</version>
                 <configuration>
 				
-				<source>jmeter/results/*.jtl</source>
+				<source>${project.build.directory}/**/*.jtl</source>
     
-				<targetDirectory>jmeter/reports</targetDirectory>
+				<targetDirectory>${project.build.directory}/results</targetDirectory>
                    
                 </configuration>
                 <executions>
